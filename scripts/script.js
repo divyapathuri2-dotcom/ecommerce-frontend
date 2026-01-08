@@ -57,3 +57,10 @@ function displayProducts(products) {
 
 // Call function
 fetchProducts();
+card.innerHTML = `
+    <a href="product.html?id=${product.id}">
+        <img src="${product.image}" loading="lazy">
+        <h3 class="product-title">${product.title}</h3>
+    </a>
+    <p class="product-price">₹ ${product.price}</p>
+`;

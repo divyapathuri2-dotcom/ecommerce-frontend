@@ -1,0 +1,19 @@
+<form id="signupForm">
+<input type="email" id="email" placeholder="Email" required>
+<input type="password" id="password" placeholder="Password" required>
+<button type="submit">Sign Up</button>
+<p id="msg"></p>
+</form>
+
+<script type="module">
+import { auth } from "./assets/js/firebase.js";
+import { createUserWithEmailAndPassword } from 
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+signupForm.addEventListener("submit", e => {
+ e.preventDefault();
+ createUserWithEmailAndPassword(auth, email.value, password.value)
+ .then(()=> msg.innerText="Signup Successful!")
+ .catch(err=> msg.innerText=err.message);
+});
+</script>

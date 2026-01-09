@@ -102,3 +102,39 @@
         flex-direction:column;
     }
 }
+.auth-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.form-box{
+    width:320px;
+    border:1px solid #ddd;
+    padding:25px;
+    border-radius:8px;
+}
+
+.form-box input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+.form-box button{
+    width:100%;
+    padding:10px;
+    background:#ff6b00;
+    color:white;
+    border:none;
+}
+
+.error{
+    color:red;
+    font-size:14px;
+}
+
+@media(max-width:500px){
+    .form-box{width:90%;}
+}

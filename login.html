@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login / Signup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="form-box">
+        <h2 id="formTitle">Login</h2>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <p class="error" id="loginError"></p>
+            <button type="submit">Login</button>
+            <p>Don't have an account? 
+               <a href="#" onclick="showSignup()">Sign Up</a>
+            </p>
+            <p><a href="#">Forgot Password?</a></p>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" style="display:none;">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <p class="error" id="signupError"></p>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? 
+               <a href="#" onclick="showLogin()">Login</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

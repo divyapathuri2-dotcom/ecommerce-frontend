@@ -93,3 +93,15 @@ function imageZoom(){
 }
 
 loadProduct();
+function addToCart(product){
+    const item = {
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        image: product.image,
+        size: selectedSize,
+        qty: qty
+    };
+
+    addItemToCart(item);
+}
